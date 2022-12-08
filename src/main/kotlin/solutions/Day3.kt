@@ -17,7 +17,6 @@ fun d3t2(lines: List<String>) {
 
     val chunked = lines.chunked(3)
 
-
     for (i in 0 until lines.size - 2 step 3) {
         val (rowOne, rowTwo, rowThree) = lines.subList(i, i + 3)
         val map: HashMap<Char, Int> = hashMapOf()
