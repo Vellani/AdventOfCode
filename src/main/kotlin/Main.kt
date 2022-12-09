@@ -13,9 +13,9 @@ fun print(any: Any) {
 
 fun main(args: Array<String>) {
     val year = 2022
-    val day = 7
+    val day = 8
     val lines = readFromFile(year, day)
 
-    d7t1(lines)
+    d8t2(lines)
 }
 
