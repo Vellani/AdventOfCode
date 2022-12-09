@@ -50,11 +50,8 @@ fun d9t2(lines: List<String>) {
 
             for (j in 1 until rope.size) {
                 if (abs(rope[j][0] - rope[j - 1][0]) > 1 || abs(rope[j][1] - rope[j - 1][1]) > 1) {
-
-                    if (abs(rope[j][0] - rope[j - 1][0]) > 1 || abs(rope[j][1] - rope[j - 1][1]) > 1) {
-                        rope[j][0] += if (rope[j - 1][0] - rope[j][0] > 0) 1 else if (rope[j - 1][0] - rope[j][0] == 0) 0 else -1
-                        rope[j][1] += if (rope[j - 1][1] - rope[j][1] > 0) 1 else if (rope[j - 1][1] - rope[j][1] == 0) 0 else -1
-                    }
+                    rope[j][0] += if (rope[j - 1][0] - rope[j][0] > 0) 1 else if (rope[j - 1][0] - rope[j][0] == 0) 0 else -1
+                    rope[j][1] += if (rope[j - 1][1] - rope[j][1] > 0) 1 else if (rope[j - 1][1] - rope[j][1] == 0) 0 else -1
 
                     if (j == rope.size - 1) {
                         set.add("${rope[rope.size - 1][0]} ${rope[rope.size - 1][1]}")
