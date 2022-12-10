@@ -1,4 +1,3 @@
-
 import solutions.*
 import java.io.File
 
@@ -13,9 +12,9 @@ fun print(any: Any) {
 
 fun main(args: Array<String>) {
     val year = 2022
-    val day = 9
+    val day = 10
     val lines = readFromFile(year, day)
 
-    d9t2(lines)
+    d10t2(lines)
 }
 
