@@ -17,10 +17,9 @@ fun d10t1(lines: List<String>) {
 }
 
 fun executeCycle1(cycle: Int, registerX: Int): Int {
-    if (listOf(20, 60, 100, 140, 180, 220).contains(cycle)) {
-        return registerX * cycle
-    }
-    return 0
+    return if (cycle in listOf(20, 60, 100, 140, 180, 220)) {
+        registerX * cycle
+    } else 0
 }
 
 fun d10t2(lines: List<String>) {
@@ -44,7 +43,7 @@ fun executeCycle2(cycle: Int, registerX: Int): StringBuffer {
 
     tempBuffer.append(if (listOf(registerX - 1, registerX, registerX + 1).contains((cycle - 1) % 40)) "##" else "  ")
 
-    if (listOf(40, 80, 120, 160, 200, 240).contains(cycle)) {
+    if (cycle in listOf(40, 80, 120, 160, 200, 240)) {
         tempBuffer.append(System.lineSeparator())
     }
     return tempBuffer

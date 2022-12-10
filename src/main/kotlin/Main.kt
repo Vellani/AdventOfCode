@@ -15,6 +15,7 @@ fun main(args: Array<String>) {
     val day = 10
     val lines = readFromFile(year, day)
 
+
     d10t2(lines)
 }
 
