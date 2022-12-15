@@ -22,8 +22,7 @@ class Monkey(entity: List<String>) {
 fun d11t1(lines: List<String>) {
     val monkeys = lines.chunked(7).map { Monkey(it) }
 
-    for (i in 1..20) {
-        println(i)
+    repeat(20) {
         monkeys.forEach { monkey ->
             while(monkey.items.size > 0) {
                 monkey.passes++
@@ -39,16 +38,14 @@ fun d11t1(lines: List<String>) {
     }
 
     val sortedMonkeys = monkeys.sortedBy { -it.passes }
-
-    println("" + sortedMonkeys[0].passes + ", " + sortedMonkeys[1].passes)
     println(sortedMonkeys[0].passes * sortedMonkeys[1].passes)
 }
 
 fun d11t2(lines: List<String>) {
     val monkeys = lines.chunked(7).map { Monkey(it) }
-    val commonDivisor: Long = monkeys.map { it.divisor.toLong() }.reduce { a, b -> a * b}
+    val commonDivisor: Long = monkeys.map { it.divisor }.reduce { a, b -> a * b}
 
-    for (i in 1..10000) {
+    repeat(10000) {
         monkeys.forEach { monkey ->
             while(monkey.items.size > 0) {
                 monkey.passes++
@@ -65,10 +62,5 @@ fun d11t2(lines: List<String>) {
     }
 
     val sortedMonkeys = monkeys.sortedBy { -it.passes }
-
-    println("" + sortedMonkeys[0].passes + ", " + sortedMonkeys[1].passes)
-    val i = sortedMonkeys[0].passes
-    val k = sortedMonkeys[1].passes
-
-    println(i * k)
+    println(sortedMonkeys[0].passes * sortedMonkeys[1].passes)
 }

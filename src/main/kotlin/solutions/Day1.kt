@@ -1,6 +1,5 @@
 package solutions
 
-import print
 
 fun d1t1(lines: List<String>) {
     var maxSum = 0
@@ -15,7 +14,7 @@ fun d1t1(lines: List<String>) {
             localMax += line.toInt()
         }
     }
-    print(maxSum)
+    println(maxSum)
 }
 
 fun d1t2(lines: List<String>) {
@@ -32,6 +31,6 @@ fun d1t2(lines: List<String>) {
     }
     maxList.sortDescending()
 
-    print(maxList.take(3).sum())
+    println(maxList.take(3).sum())
 
 }

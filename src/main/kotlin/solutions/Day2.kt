@@ -1,6 +1,6 @@
 package solutions
 
-fun dd2t1(lines: List<String>) {
+fun d2t1(lines: List<String>) {
     val map: Map<Char, Int> = mapOf(
         'A' to 1,
         'B' to 2,
