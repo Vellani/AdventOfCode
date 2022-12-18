@@ -1,5 +1,7 @@
 package solutions
 
+import writeToFile
+
 
 val queue = ArrayList<Block>()
 
@@ -115,12 +117,7 @@ fun calculateAndPrintPath(map: List<CharArray>, finalBlock: Block) {
         list[block.x][block.y] = '█'
         block = queue.find { it.x == block.prev!!.first && it.y == block.prev!!.second }!!
     }
-    list.forEach { e ->
-        e.forEach { c ->
-            print(c)
-        }
-        println()
-    }
 
+    writeToFile(list)
 }
 

@@ -8,7 +8,6 @@ fun d13t1(lines: List<String>) {
         val depthListTwo = buildNodes(e[1].replace("10", "a").toCharArray())
 
         val areOrdered = deepCompare(depthListOne as ArrayList<*>, depthListTwo as ArrayList<*>)
-        println("Index: $index: $areOrdered")
         if (areOrdered == 1 || areOrdered == 0) acc + index + 1 else acc
     }
     println(folded)
