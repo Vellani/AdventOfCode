@@ -4,7 +4,6 @@ import writeToFile
 import java.lang.Integer.min
 import java.lang.Math.max
 
-
 fun d14t1(lines: List<String>) {
     val scan = getCoordinates(lines)
 
