@@ -2,3 +2,5 @@
 .src/main/resources/
 /src/main/resources/
 /.idea/
+/target/
+/target

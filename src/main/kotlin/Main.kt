@@ -8,7 +8,7 @@ fun readFromFile(year: Int, day: Int): List<String> {
 
 fun main(args: Array<String>) {
     val year = 2022
-    val day = 12
+    val day = 13
     val task = 2
 
     solve(year, day, task)
@@ -29,6 +29,7 @@ fun solve(year: Int, day: Int, task: Int) {
         10 -> { if(task == 1) d10t1(lines) else d10t2(lines) }
         11 -> { if(task == 1) d11t1(lines) else d11t2(lines) }
         12 -> { if(task == 1) d12t1(lines) else d12t2(lines) }
+        13 -> { if(task == 1) d13t1(lines) else d13t2(lines) }
     }
 
 }
