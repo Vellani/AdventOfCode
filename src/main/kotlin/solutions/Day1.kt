@@ -32,5 +32,4 @@ fun d1t2(lines: List<String>) {
     maxList.sortDescending()
 
     println(maxList.take(3).sum())
-
 }
